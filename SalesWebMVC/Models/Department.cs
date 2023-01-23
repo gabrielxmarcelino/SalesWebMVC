@@ -21,14 +21,14 @@ namespace SalesWebMVC.Models
 			Name = name;
 		}
 
-		public void AddSeller(Seller seller)
+		public void AddSeller(Seller Seller)
 		{
-			Sellers.Add(seller);
+			Sellers.Add(Seller);
 		}
 
 		public double TotalSales(DateTime initial, DateTime final)
 		{
-			return Sellers.Sum(seller => seller.TotalSales(initial, final));
+			return Sellers.Sum(Seller => Seller.TotalSales(initial, final));
 		}
 	}
 }
